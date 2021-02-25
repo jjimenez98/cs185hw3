@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
+import Tab from "./components/Tab";
+import Home from "./components/Home";
+import Email from "./components/Email";
+import Table from "./components/Table";
+import Video from "./components/Video";
+import Image from "./components/Image";
+import Text from "./components/Text";
 
 function App() {
+  const Tablist = () => <Tab />;
+  const Body = () => {
+    return (
+      <Switch>
+        <Route path="/" component={Home} exact={true} />
+        <Route path="/text" component={Text} />
+        <Route path="/images" component={Image} />
+        <Route path="/videos" component={Video} />
+        <Route path="/table" component={Table} />
+        <Route path="/email" component={Email} />
+      </Switch>
+    );
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <div>
+          <Tablist />
+          <Body />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
