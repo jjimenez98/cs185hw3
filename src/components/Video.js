@@ -1,5 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import { useEffect } from "react";
+import video1 from "../videos/big_buck_bunny.mp4";
+import video2 from "../videos/Source_out.mp4";
+import video3 from "../videos/trailer.mp4";
 
 function Video() {
   return (
@@ -8,7 +11,7 @@ function Video() {
         <div className="row">
           <div className="col-1-of-3">
             <video
-              src="images/big_buck_bunny.mp4"
+              src={video1}
               height="300"
               width="400"
               type="audio/mp4"
@@ -17,7 +20,7 @@ function Video() {
           </div>
           <div className="col-1-of-3">
             <video
-              src="images/trailer.mp4"
+              src={video2}
               height="300"
               width="400"
               type="audio/mp4"
@@ -26,7 +29,7 @@ function Video() {
           </div>
           <div className="col-1-of-3">
             <video
-              src="images/Source_out.mp4"
+              src={video3}
               height="300"
               width="400"
               type="audio/mp4"

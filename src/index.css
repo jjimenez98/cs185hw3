@@ -362,13 +362,8 @@ input[type="text"] {
   width: 100%;
 }
 
-.form {
-  height: 20rem;
-}
 
-form {
-  height: 20rem;
-}
+
 
 .error-message {
   color: #cc0033;

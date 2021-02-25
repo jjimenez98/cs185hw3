@@ -53,13 +53,13 @@ function Email() {
             <div id="form-error" className="error-message">
               Email is a required field.
             </div>
+            <input
+              id="form-submit"
+              className="form-submit"
+              type="submit"
+              value="Submit Now!"
+            ></input>
           </div>
-          <input
-            id="form-submit"
-            className="form-submit"
-            type="submit"
-            value="Submit Now!"
-          />
         </div>
       </section>
     </div>
